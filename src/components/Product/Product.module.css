@@ -1,0 +1,43 @@
+.Product{
+    box-shadow: 0 2px 12px 2px #00000045;
+    margin-top: 40px;
+    width: 250px;
+    padding: 10px 0;
+}
+.HeaderCart{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.Product img{
+    width: 80%;
+    transition: .5s;
+}
+.Product button{
+    position: absolute;
+    bottom: -100%;
+    right: -100%;
+    transition: .7s;
+    border-top-left-radius: 7px;
+    color: white;
+    background-color: #009ffd;
+}
+.Product button:hover{
+    color: rgb(26, 45, 87);
+}
+.Product:hover button{
+    bottom: -10px;
+    right: -10px;
+}
+.Product:hover img{
+    transform: scale(1.05);
+}
+.FooterCart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+

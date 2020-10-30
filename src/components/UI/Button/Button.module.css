@@ -1,0 +1,37 @@
+.Button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 6px 8px;
+    margin: 10px;
+    font-weight: bold;
+}
+.Button > * {
+    margin-right: 10px;
+}
+.Button:disabled{
+    color: #009ffd;
+    cursor: not-allowed;
+}
+
+.Orange {
+    color: #ffa400;
+    border-color: #ffa400;
+    transition: .7s;
+}
+.Orange:hover {
+    color: white;
+    background-color: #ffa400;
+}
+
+.Blue {
+    transition: .7s;
+    color: #009ffd;
+    border-color: #009ffd;
+}
+.Blue:hover {
+    color: white;
+    background-color: #009ffd;
+}

@@ -1,0 +1,44 @@
+.Detail{
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0;
+}
+.Image{
+    width: 40%;
+}
+.Image img{
+    width: 100%;
+    height: 100%;
+}
+.Info{
+    width: 55%;
+}
+.Info h3{
+    font-size: 22px;
+}
+.Made{
+    color: rgb(87, 94, 126);
+    font-weight: bold;
+    margin: 15px 0;
+}
+.Info span{
+    font-weight: bold;
+    color: rgb(252, 13, 13)
+}
+.Info_para{
+    margin: 15px 0;
+    color: grey;
+}
+/*  @media(min-width:500px){
+    .Detail{
+        display: block;
+    }
+    .Image{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .Info{
+        width: 80%;
+        margin: 0 auto;
+    }
+} */ 
