@@ -9,7 +9,7 @@ class Cart extends Component {
             <ContextConsumer>
                 {({toCart})=>{
                     return(
-                        <CartColumns toCart={toCart}/>
+                        <CartColumns/>
                     )
                 }}
             </ContextConsumer>

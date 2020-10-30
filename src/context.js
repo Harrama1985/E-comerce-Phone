@@ -5,7 +5,8 @@ class ContextProvider extends Component {
     state={
         products:[],
         detailProduct:{},
-        toCart:[]
+        toCart:[],
+        modalOpen:true
     }
     async componentDidMount(){
         const products = await axios.get('https://phoneecomerce.firebaseio.com/Products.json')
@@ -23,7 +24,14 @@ class ContextProvider extends Component {
     }
     addToCart=(id)=>{
         const product = this.getProduct(id)
-        const setProducts = this.state.products.filter(prd=> prd.id===product.id? prd.inCart=true : prd)
+        const setProducts = this.state.products.filter(prd=>{
+            if(prd.id===product.id){
+                prd.inCart=true
+                prd.cout=1
+                prd.total=prd.price
+                return prd
+            }else{return prd}
+        })
         this.setState(()=>{
             return{
                 products:setProducts,
@@ -31,12 +39,25 @@ class ContextProvider extends Component {
             }
         })
     }
+    modalOpen=()=>{
+        this.setState(()=>{
+            return {modalOpen:true}
+        })
+    }
+
+    modalClose=()=>{
+        this.setState(()=>{
+            return {modalOpen:false}
+        })
+    }
     render() {
         return (
             <ContextProducts.Provider value={{
                                         ...this.state,
                                         detailHandler:this.detailHandler,
-                                        addToCart:this.addToCart
+                                        addToCart:this.addToCart,
+                                        modalOpen:this.modalOpen,
+                                        modalClose:this.modalClose
                                         }}>
                 {this.props.children}
             </ContextProducts.Provider>
